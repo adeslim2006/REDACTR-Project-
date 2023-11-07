@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add stylesheet  -->
+    <link rel="stylesheet" href="/css/stylesheet.css" />
+    <!-- add script -->
+    <script defer src="/js/script.js"></script>
+    <title>Redactr-word scrambler</title>
+  </head>
+  <body class="body">
+    <h2 class="banner">Welcome to REDACTR</h2>
+
+    <main class="main-card">
+      <div class="form-card">
+        <form>
+          <div class="flex-container">
+            <div class="box">
+              <div class="TextBox">
+                <textarea
+                  id="unscrambledTextBox"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+                <p class="box-caption">UnscrambledText</p>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="TextBox">
+                <textarea id="CharacterBox" cols="30" rows="10"></textarea>
+                <p class="box-caption">Character BOX</p>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="TextBox">
+                <textarea id="wordMatchingBox" cols="30" rows="10"></textarea>
+                <p class="box-caption">Matching Words</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="second-line">
+            <section class="stats-section">
+              <div class="stats-container">
+                <p>Number of scanned words:</p>
+                <p>Number of matching scrambled words:</p>
+                <p>Number of scrambled characters:</p>
+                <p>Number of seconds it took to scramble the words:</p>
+              </div>
+            </section>
+
+            <div class="btn_container">
+              <button class="btn" type="submit">Redact Now</button>
+            </div>
+          </div>
+        </form>
+
+        <div class="resultbox">
+          <div class="TextBox">
+            <textarea id="result" cols="30" rows="10"></textarea>
+            <p class="box-caption">Result</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
