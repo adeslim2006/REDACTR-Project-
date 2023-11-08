@@ -45,9 +45,17 @@ textarea, .textarea {
   flex-direction: column;
 }
 
+#stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .second-line {
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .btn {
@@ -63,7 +71,7 @@ textarea, .textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1em;
+  margin: 1em;
 }
 
 .box-caption {

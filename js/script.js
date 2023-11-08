@@ -18,6 +18,7 @@ const resultBox = document.getElementById("result");
 // In order to prevent the form from submitting
 document.getElementById('scrambleForm').addEventListener('submit', function(event) {
     event.preventDefault(); 
+    
 
     redactText();
 });
@@ -43,6 +44,6 @@ function redactText() {
 
     document.getElementById('redactedText').textContent = redactedText;
 
-    const stats = `Words Scanned: ${wordsScanned}, Words Matched: ${wordsMatched}, Characters Scrambled: ${charactersScrambled}`;
+    const stats = `Number of Words Scanned: ${wordsScanned}, Number of Words Matched: ${wordsMatched}, Number of Characters Scrambled: ${charactersScrambled} `;
     document.getElementById('stats').textContent = stats;
 }
