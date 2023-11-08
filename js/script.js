@@ -12,8 +12,37 @@ how long it took (in seconds) to complete the scrambling task etc. */
 // if the charbox is empty then use * to scramble the words as a default
 
 
-const unscrambledBox = document.querySelector("#unscrambledTextBox");
-const charBox = document.querySelector("#CharacterBox");
-const wordMatchingBox = document.querySelector("#wordMatchingBox");
-const resultBox = document.querySelector("#result");
+const resultBox = document.getElementById("result");
 
+
+// In order to prevent the form from submitting
+document.getElementById('scrambleForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    redactText();
+});
+
+
+function redactText() {
+    const originalText = document.getElementById('originalText').value;
+    const wordsToRedact = document.getElementById('wordsToRedact').value.split(' ');
+    const replacementChar = document.getElementById('replacementChar').value;
+
+    let redactedText = originalText;
+    let wordsScanned = 0;
+    let wordsMatched = 0;
+    let charactersScrambled = 0;
+
+    for (const word of wordsToRedact) {
+        const regex = new RegExp(word, 'g');
+        redactedText = redactedText.replace(regex, replacementChar.repeat(word.length));
+        wordsScanned += originalText.match(new RegExp(`\\b${word}\\b`, 'g')).length;
+        wordsMatched++;
+        charactersScrambled += word.length;
+    }
+
+    document.getElementById('redactedText').textContent = redactedText;
+
+    const stats = `Words Scanned: ${wordsScanned}, Words Matched: ${wordsMatched}, Characters Scrambled: ${charactersScrambled}`;
+    document.getElementById('stats').textContent = stats;
+}
