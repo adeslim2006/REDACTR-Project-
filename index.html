@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Add stylesheet  -->
-    <link rel="stylesheet" href="/css/stylesheet.css" />
-    <!-- add script -->
-    <script defer src="/js/script.js"></script>
-    <title>Redactr-word scrambler</title>
-  </head>
-  <body class="body">
-    <h2 class="banner">Welcome to REDACTR</h2>
 
-    <main class="main-card">
-      <div class="form-card" id="scrambleForm">
-        <form>
-          <div class="flex-container">
-            <div class="box">
-              <div class="TextBox">
-                <textarea
-                  id="originalText"
-                  cols="30"
-                  rows="10"
-                ></textarea>
-                <p class="box-caption">UnscrambledText</p>
-              </div>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Add stylesheet  -->
+  <link rel="stylesheet" href="/css/stylesheet.css" />
+  <!-- add script -->
+  <script defer src="/js/script.js"></script>
+  <title>Redactr-word scrambler</title>
+</head>
 
-            <div class="box">
-              <div class="TextBox">
-                <input type="text" class="textarea" id="replacementChar">
-                <p class="box-caption" id="demo">Character BOX</p>
-              </div>
-            </div>
+<body class="body">
+  <h2 class="banner">Welcome to REDACTR</h2>
 
-            <div class="box">
-              <div class="TextBox">
-                <input type="text" class="textarea" id="wordsToRedact">
-                <p class="box-caption">Matching Words</p>
-              </div>
+  <main class="main-card">
+    <div class="form-card" id="scrambleForm">
+      <form>
+        <div class="flex-container">
+          <div class="box">
+            <div class="TextBox">
+              <textarea id="originalText" cols="30" rows="10"></textarea>
+              <p class="box-caption">UnscrambledText</p>
             </div>
           </div>
 
-            <div class="btn_container">
-              <button class="btn" onclick="redactText()">Redact Now</button>
+          <div class="box">
+            <div class="TextBox">
+              <input type="text" class="textarea" id="replacementChar">
+              <p class="box-caption" id="demo">Character BOX</p>
             </div>
           </div>
-        </form>
-<div class="finalsection">
-        <div class="second-line">
-          <section class="stats-section">
-            <div class="stats-container" id="stats">
-              
+
+          <div class="box">
+            <div class="TextBox">
+              <input type="text" class="textarea" id="wordsToRedact">
+              <p class="box-caption">Matching Words</p>
             </div>
-          </section>
+          </div>
+        </div>
+
+        <div class="btn_container">
+          <button class="btn" onclick="redactText()">Redact Now</button>
+        </div>
+    </div>
+    </form>
+    <div class="finalsection">
+      <div class="second-line">
+        <section class="stats-section">
+          <div class="stats-container" id="stats">
+
+          </div>
+        </section>
 
         <div class="resultbox">
           <div class="TextBox">
@@ -64,7 +62,8 @@
 
       </div>
 
-      </div>
-    </main>
-  </body>
+    </div>
+  </main>
+</body>
+
 </html>
